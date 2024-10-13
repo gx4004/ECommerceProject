@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @await Html.PartialAsync("Partials/PageHead.cshtml")
+</head>
+
+<body>
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+@await Html.PartialAsync("Partials/HamburgerMenu.cshtml")
+@await Html.PartialAsync("Partials/Header.cshtml")
+@await Html.PartialAsync("Partials/Hero.cshtml")
+
+@RenderBody()
+
+@await Html.PartialAsync("Partials/Footer.cshtml")
+@await Html.PartialAsync("Partials/PageScripts.cshtml")
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
